@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Name - Details</title>
+    <title>POS & Inventory System - Details</title>
     <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
     
     <header> 
         <nav>
-            <div class="logo">Your Name</div>
+            <div class="logo">Asekhauno Joshua</div>
             <ul>
                 <li><a href="index.html#about">ABOUT</a></li>
                 <li><a href="index.html#projects">PROJECTS</a></li>
@@ -23,63 +23,67 @@
         <section class="project-detail-section">
             <a href="index.html#projects" class="back-link">&larr; Back to Projects</a>
             
-            <h1 class="project-title">Inventory Management System</h1>
+            <h1 class="project-title">Cloud-Native POS & Inventory Management</h1>
             <p class="project-summary">
-                A robust, full-stack application built to streamline warehouse operations and inventory tracking for small businesses.
+                A high-performance, modular backend system built to manage real-time sales and stock tracking for multi-location retail businesses.
             </p>
             
             <figure class="main-screenshot">
-                <img src="images/project-inventory-app-full.png" alt="Full view of the Inventory App Dashboard">
-                <figcaption>The main dashboard showing key metrics.</figcaption>
+                <img src="assets/port 1.png" alt="POS Dashboard Overview">
+                <figcaption>Enterprise-grade modular architecture for retail operations.</figcaption>
             </figure>
 
             <div class="content-block">
                 <h2>The Problem and Solution</h2>
                 <p>
-                    **Problem:** Our client was relying on error-prone spreadsheets to manage thousands of stock items, leading to frequent inventory discrepancies and lost sales. [cite: 44]
+                    <strong>Problem:</strong> Small-to-medium retailers struggle with stock discrepancies during high-volume sales, often caused by lack of atomicity in transaction processing and disconnected inventory data.
                 </p>
                 <p>
-                    **Solution:** I designed and implemented a centralized, database-driven system that provides real-time stock updates, automated reorder alerts, and a secure way to track transactions. [cite: 43]
+                    <strong>Solution:</strong> I architected a Domain-Driven Design (DDD) backend using NestJS, ensuring that every sale is an atomic transaction that updates stock levels and generates an audit trail in real-time.
                 </p>
             </div>
 
             <div class="content-block">
-                <h2>Key Features</h2>
+                <h2>System Architecture</h2>
+                <figure class="main-screenshot">
+                    <img src="assets/port 3.png" alt="PostgreSQL Database Schema on Aiven">
+                    <figcaption>Relational schema designed for referential integrity and transaction safety.</figcaption>
+                </figure>
                 <ul>
-                    <li>**Real-time Stock Tracking:** Immediate updates on inventory levels across multiple locations. [cite: 45]</li>
-                    <li>**User Role Management:** Granular permissions for warehouse staff, managers, and administrators. [cite: 45]</li>
-                    <li>**Report Generation:** Automatic generation of PDF and CSV reports for sales, stock depletion, and supplier performance. [cite: 45]</li>
+                    <li><strong>Atomic Transactions:</strong> Implemented TypeORM transactions to ensure "No Sale without Stock Deduction."</li>
+                    <li><strong>Modular Domain Design:</strong> Separated logic into Auth, Catalog, Inventory, and Sales modules for scalability.</li>
+                    <li><strong>Cloud Persistence:</strong> Integrated with Aiven PostgreSQL for managed, high-availability data storage.</li>
                 </ul>
             </div>
 
             <div class="content-block">
                 <h2>Technologies Used</h2>
                 <ul class="tech-list">
-                    <li>**Backend:** Python, Django Rest Framework [cite: 47]</li>
-                    <li>**Database:** PostgreSQL [cite: 47]</li>
-                    <li>**Frontend:** HTML5, CSS3, Vanilla JavaScript (for simple interactions) [cite: 47]</li>
-                    <li>**Deployment:** Docker, AWS EC2 [cite: 47]</li>
+                    <li><strong>Backend:</strong> NestJS (Node.js), TypeScript</li>
+                    <li><strong>Database:</strong> PostgreSQL (Aiven Cloud), TypeORM</li>
+                    <li><strong>Documentation & Testing:</strong> Postman, Swagger</li>
+                    <li><strong>DevOps:</strong> Git (Branching/PR Workflow), Environment Configuration</li>
                 </ul>
             </div>
 
             <div class="content-block">
                 <h2>Key Learning Outcomes</h2>
                 <p>
-                    This project was instrumental in mastering database optimization techniques. Specifically, I learned how to structure complex many-to-many relationships in PostgreSQL to handle high-volume transactions efficiently, which significantly improved report generation speed. [cite: 48]
+                    Acting as the <strong>Lead Architect</strong>, I mastered the art of setting up a scalable project skeleton that enables multiple developers to work in parallel without merge conflicts. I gained deep experience in configuring Cloud DB instances (Aiven), handling secure SSL connections in Node.js, and implementing complex relational logic between Products, SKUs, and Stock Movements.
                 </p>
             </div>
 
             <div class="content-block">
-                <h2>More Screenshots</h2>
+                <h2>Development & Documentation</h2>
                 <div class="screenshot-gallery">
-                    <img src="images/project-inventory-reports.png" alt="Reports Page"> [cite: 46]
-                    <img src="images/project-inventory-mobile.png" alt="Mobile View"> [cite: 46]
+                    <img src="assets/port 1.png" alt="API Documentation in Postman">
+                    <img src="assets/port 2.png" alt="Modular NestJS Folder Structure">
                 </div>
             </div>
 
             <div class="project-links">
-                <a href="[Link to Live Deployment]" class="btn-primary" target="_blank">View Live Site</a>
-                <a href="[Link to GitHub Repository]" class="btn-primary github-btn" target="_blank">View Code on GitHub</a>
+                <a href="[Link to Live Deployment]" class="btn-primary" target="_blank">View Live API</a>
+                <a href="https://github.com/Hephmanuel/pos-inventory-system" class="btn-primary github-btn" target="_blank">View Code on GitHub</a>
             </div>
 
         </section>

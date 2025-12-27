@@ -431,3 +431,53 @@ nav ul li a:hover {
     /* Optional: use a server-side service color */
     background-color: var(--clr-accent);
 }
+
+/* 1. Ensure all images inside the project detail section are responsive */
+.project-detail-section img {
+    max-width: 100%;   /* Prevents image from being wider than its container */
+    height: auto;      /* Maintains original aspect ratio as width changes */
+    display: block;    /* Removes extra whitespace at the bottom */
+}
+
+/* 2. Fix the main screenshot container */
+.main-screenshot {
+    margin: 2rem 0;
+    width: 100%;       /* Ensures the figure takes full width available */
+    overflow: hidden;  /* Keeps the border-radius clean if image overflows slightly */
+}
+
+.main-screenshot img {
+    width: 100%;       /* Forces image to span the full width of the figure */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* 3. Fix the Gallery for mobile */
+.screenshot-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.screenshot-gallery img {
+    width: 100%;
+    height: 250px;     /* You can keep a fixed height here... */
+    object-fit: cover; /* ...but object-fit ensures it doesn't look stretched */
+    border-radius: 6px;
+}
+
+/* 4. Mobile-specific tweaks (Media Query) */
+@media (max-width: 768px) {
+    .project-title {
+        font-size: 2rem; /* Shrink title on mobile so it doesn't break layout */
+    }
+    
+    .screenshot-gallery {
+        grid-template-columns: 1fr; /* Force single column on phones */
+    }
+
+    .screenshot-gallery img {
+        height: auto; /* Allow height to be natural on small phones */
+    }
+}
